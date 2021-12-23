@@ -1,0 +1,176 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #c4c4c4;
+    padding: 30px;
+}
+
+/* Container PARTE INTEIRA DO SITE*/
+.container {
+    display: flex;
+}
+
+/* Menu Lateral Inicio PARTE MENU INTEIRO */
+.container .menu--lateral {
+    width: 350px;
+    height: calc(100vh - 60px);
+    padding: 40px 30px;
+    background-color: rgba(0, 0, 0, .8);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+/* Menu Lateral Fim */
+
+/* Menu Estoque / Entrada-Saída Inicio /  DIV QUE ENVOLVE OS LINK: Estoque Atua / Entrada / Saída*/
+.container .menu--lateral .menu--estoque,
+.container .menu--lateral .menu--entrada-saida {
+    margin-bottom: 50px;
+}
+
+/* Mini Titulo sob os links: ESTOQUE / ENTRADA / SAÍDA */
+.container .menu--lateral .menu--estoque p,
+.container .menu--lateral .menu--entrada-saida p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 10px;
+}
+
+/* LINKS DO ESTOQUE / ENTRADA / SAÍDA */
+.container .menu--lateral .menu--estoque a,
+.container .menu--lateral .menu--entrada-saida a {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, .9);
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* PARA SABER QUAL PÁGINA O USUARIO ESTÁ. cor verde do lado esquerdo do link */
+.container .menu--lateral .menu--entrada-saida .select::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: chartreuse;
+}
+
+/* ICONE DO LADO DO LINKs */
+.container .menu--lateral .menu--estoque a #icon-estoque,
+.container .menu--lateral .menu--entrada-saida a #icon-entrada,
+.container .menu--lateral .menu--entrada-saida a #icon-saida {
+    margin-right: 10px;
+}
+
+/* LINK: ENTRADA: Está com margin para distanciar o link da SAÍDA */
+.container .menu--lateral .menu--entrada-saida .entrada {
+    margin-bottom: 20px;
+}
+
+/* DADOS ENTRADA: AQUI COMEÇA OS DADOS EM SI: PARTE INTEIRA */
+.dados-entrada {
+    background-color: #fff2ec;
+    margin-left: 30px;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* PARTE DO FURMALARIO. OBS: MEXENDO APENA NA TAG form */
+.dados-entrada form {
+    background-color: #fabec0;
+    width: 300px;
+    height: calc(100vh - 390px);
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+/* MEXENDO APENAS NOS TITULO EM CIMA DO INPUT. OBS: USE backgroud-color PARA SABER ONDE É */
+.dados-entrada form span {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 17px;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+/* MEXENDO APENAS NOS INPUTs EM GERAL */
+.dados-entrada form input {
+    width: 100%;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    box-shadow: 1px 1px 21px #d4a16b;
+}
+
+/* MEXENDO APENAS NA DIV QUE ENVOLVE A TAG <button> */
+.dados-entrada form .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 45px;
+}
+
+/* MEXENDO APENAS NA TAG <button> */
+.dados-entrada form button {
+    width: 140px;
+    height: 35px;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid #e6b47f;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #d4a16b;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MEXENDO NO ICONE DE ENVIAR */
+.dados-entrada form button #icon-enviar {
+    margin-left: 10px;
+}
+
+/* MEXENDO APENAS NO ICONE x DO LADO DO BOTÃO ENVIAR */
+.dados-entrada form a #icon-limpar {
+    width: 35px;
+    height: 35px;
+    color: #ff0000;
+}

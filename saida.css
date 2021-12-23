@@ -1,0 +1,258 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #c4c4c4;
+    padding: 30px;
+}
+
+/* Container INTEIRO*/
+.container {
+    display: flex;
+}
+
+/* Menu Lateral Inicio. PARTE DO MENU LATERAL INTEIRO */
+.container .menu--lateral {
+    width: 350px;
+    height: calc(100vh - 60px);
+    padding: 40px 30px;
+    background-color: rgba(0, 0, 0, .8);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+/* Menu Lateral Fim */
+
+/* Menu Estoque / Entrada-Saída Inicio / DIV QUE CONTÉM OS LINKs */
+.container .menu--lateral .menu--estoque,
+.container .menu--lateral .menu--entrada-saida {
+    margin-bottom: 50px;
+}
+
+/* MINI TITULO ACIMA DOS LINKs. */
+.container .menu--lateral .menu--estoque p,
+.container .menu--lateral .menu--entrada-saida p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 10px;
+}
+
+/* LINKS DO MENU LATERAL */
+.container .menu--lateral .menu--estoque a,
+.container .menu--lateral .menu--entrada-saida a {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, .9);
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* O LINK SELECIONADO, PARA SABER QUAL PÁGINA O USUARIO ESTÁ */
+.container .menu--lateral .menu--entrada-saida .select::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: chartreuse;
+}
+
+/* ICONES DOS LINKs DO MENU */
+.container .menu--lateral .menu--estoque a #icon-estoque,
+.container .menu--lateral .menu--entrada-saida a #icon-entrada,
+.container .menu--lateral .menu--entrada-saida a #icon-saida {
+    margin-right: 10px;
+}
+
+/* LINK SAÍDA ESTÁ COM margin PARA DISTANCIAR DO LINK DE CIMA */
+.container .menu--lateral .menu--entrada-saida .saida {
+    margin-top: 20px;
+}
+
+/* SAÍDA DE DADOS INTEIRO*/
+.dados-saida {
+    background-color: #fff2ec;
+    margin-left: 30px;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* FORMULARIO COMPLETO, ENVOLVENDO TUDO */
+.dados-saida form {
+    background-color: #fabec0;
+    width: 400px;
+    height: calc(100vh - 390px);
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+/* PARTE DO FORM ONDE ESTÁ ESCRITO: Insira o Código | Quant. Produto. OBS: USE backgroud-color PARA SABER ONDE É */
+.dados-saida form span {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 17px;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+/* OS INPUT DO FORM */
+.dados-saida form input {
+    width: 100%;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    box-shadow: 1px 1px 21px #d4a16b;
+}
+
+/* DIV QUE ESTÁ ENVOLVENDO AS 2 TABELA. OBS: USE backgroud-color PARA SABER ONDE É */
+.dados-saida form .info-produto--atual,
+.dados-saida form .info-produto--depois {
+    background-color: #fff;
+    margin-top: 50px;
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+}
+
+/* DIV QUE ESTÁ ENVOLVENDO A 2º TABELA. COM margin PARA DISTANCIAR UM POUCO */
+.dados-saida form .info-produto--depois {
+    margin-top: 15px;
+}
+
+/* BARRA VERDE FINA ENTRE AS DUAS TABELAS */
+.bar {
+    width: 100%;
+    height: 5px;
+    background-color: #0e570e;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* PARTE DO TITULO ONDE ESTÁ ESCRITO: Estoque Atua | Estoque Depois */
+.dados-saida form .info-produto--atual p,
+.dados-saida form .info-produto--depois p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #0e570e;
+    text-align: center;
+    margin: 5px 0;
+}
+
+/* MEXENDO SOMENTE NA TAG <table> */
+table {
+    width: 100%;
+}
+
+/* MEXENDO SOMENTE NA LINHA DO CABEÇALHO DA TABELA */
+table thead tr {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #000;
+    color: #fff;  
+}
+
+/* MEXENDO NAS FONTES DA LETRA DA TABELA, QUANTO DO thead e tbody */
+table thead tr th,
+table tbody tr td  {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dados-saida form .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 45px;
+}
+
+.dados-saida form button {
+    width: 140px;
+    height: 35px;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid #e6b47f;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #d4a16b;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dados-saida form button #icon-enviar {
+    margin-left: 10px;
+}
+
+.dados-saida form a #icon-limpar {
+    width: 35px;
+    height: 35px;
+    color: #ff0000;
+}

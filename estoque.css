@@ -1,0 +1,248 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #c4c4c4;
+    padding: 30px;
+}
+
+/* Container: Pega o MENU LATERAL e o ESTOQUE */
+.container {
+    display: flex;
+}
+
+/* Menu Lateral Inicio: ESSA PARTE É DO MENU INTEIRO */
+.container .menu--lateral {
+    width: 350px;
+    height: calc(100vh - 60px);
+    padding: 40px 30px;
+    background-color: rgba(0, 0, 0, .8);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+/* Menu Lateral Fim */
+
+/* Menu Estoque / Entrada-Saída Inicio / Total Vendas: AS PARTE DO MENU, LINKS */
+.container .menu--lateral .menu--estoque,
+.container .menu--lateral .menu--entrada-saida {
+    margin-bottom: 50px;
+}
+
+.container .menu--lateral .menu--estoque p,
+.container .menu--lateral .menu--entrada-saida p,
+.container .menu--lateral .menu--total-vendas p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 10px;
+}
+
+.container .menu--lateral .menu--estoque a,
+.container .menu--lateral .menu--entrada-saida a,
+.container .menu--lateral .menu--total-vendas a {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, .9);
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.container .menu--lateral .menu--estoque .select::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: chartreuse;
+}
+
+.container .menu--lateral .menu--estoque a #icon-estoque,
+.container .menu--lateral .menu--entrada-saida a #icon-entrada,
+.container .menu--lateral .menu--entrada-saida a #icon-saida,
+.container .menu--lateral .menu--total-vendas a #icon-total {
+    margin-right: 10px;
+}
+
+.container .menu--lateral .menu--entrada-saida .entrada {
+    margin-bottom: 20px;
+}
+/* Menu Estoque / Entrada-Saída Fim / Total Vendas */
+
+/* ESSA PARTE JÁ É DO ESTOQUE: A Parte BRANCA  */
+.container .bloco--estoque {
+    width: 100%;
+    height: calc(100vh - 60px);
+    margin-left: 30px;
+    border-radius: 10px;
+    padding: 30px;
+    background-color: #fff;
+}
+
+/* ESSA PARTE É A PARTE VERDE ESCRITO: "Estoque Atual e Detalhes do Estoque" */
+.container .bloco--estoque .title-estoque {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    background-color: #0e570e;
+    border-radius: 10px;
+}
+
+/* ESSA PARTE É A PARTE VERDE ESCRITO: "Estoque Atual" */
+.container .bloco--estoque .title-estoque span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* ESSA PARTE É A PARTE VERDE ESCRITO: "Detalhes do Estoque" */
+.container .bloco--estoque .title-estoque p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* ESSA PARTE É A BARRA VERDE FINA SEM NADA */
+.container .bloco--estoque .bar {
+    width: 100%;
+    height: 5px;
+    background-color: #0e570e;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* ESSA PARTE É ONDE VAI BUSCAR O PRODUTO COLOCANDO O CÓDIGO DELE: Canto Direito da Tela */
+.container .bloco--estoque form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+/* ESSA PARTE É ONDE VAI BUSCAR O PRODUTO COLOCANDO O CÓDIGO DELE: Parte do Input */
+.container .bloco--estoque form input {
+    width: 190px;
+    height: 30px;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, .5);
+    outline: none;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+/* ESSA PARTE É O placeholder DO INPUT */
+.container .bloco--estoque form input::placeholder {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ESSA PARTE É A LUPA DE PESQUISA DENTRO DO INPUT. OBS: ESTÁ MEXENDO SOMENTE NA TAG: <a></a> NÃO NO ICONE */
+.container .bloco--estoque form a {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    position: absolute;
+    right: 7px;
+}
+
+/* ESSA PARTE É A LUPA DE PESQUISA DENTRO DO INPUT. OBS: ESTÁ MEXENDO NO ICONE e NÂO NA TAG: <a></a> */
+.container .bloco--estoque form #icon-form {
+    width: 20px;
+    height: 20px;
+    color: rgba(0, 0, 0, .5);
+}
+
+/* AQUI COMEÇA A TABELA DO ESTOQUE, CONTENDO OS DADOS */
+table {
+    width: 100%;
+    height: calc(100vh - 320px);
+    margin-top: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    position: relative;
+}
+
+/* ESSA PARTE MEXE NO CABEÇALHO DA TABELA, ONDE ESTÁ: CÓDIGO | NOME | MARCA | CATEGORIA | QUANT. | VALOR */
+table thead tr {
+    position: fixed;
+    width: 76.75%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    color: #fff;  
+}
+
+/* ESSA PARTE MEXE COM O body DA TABELA. OBS: ESTÁ COM margin-top POR CAUSA DO position: fixed; NO CÓDIGO ACIMA */
+table tbody { 
+    margin-top: 45px;
+}
+
+/* ESSA PARTE MEXE COM AS LINHAS DO tbody / thead DA TABELA */
+table tbody tr,
+table thead tr{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* OS DADOS DO ESTOQUE ESTÃO COM cursor: pointeir */
+table tbody tr {
+    cursor: pointer;
+    transition: .1s;
+}
+
+/* AQUI MEXE NAS LINHA DO body, MAS PINTANDO AS LINHA ÍMPARES */
+table tbody tr:nth-child(odd) {
+    background-color: #c4c4c4;
+}
+
+table tbody tr:hover,
+table tbody tr:nth-child(odd):hover {
+    background-color: #0e570e;
+    color: #e6b47f;
+}
+
+/* AQUI É ONDE ESTÁ AS FONTES DAS LETRAS E TAMANHOS. OBS: ESTÁ MEXENDO NO thead E tbody */
+table thead tr th,
+table tbody tr td  {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+/* AQUI ESTÁ DANDO margin NOS CARACTERES E NÂO NA LINHA: OBS: USE background-color PARA VER ONDE ESTÁ MEXENDO */
+table tbody tr td {
+    margin: 5px 0;
+}
+
+

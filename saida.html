@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Estoque</title>
+    <link rel="stylesheet" href="saida.css">
+</head>
+<body>
+    <section class="container">
+        <!-- MENU LATERAL INTEIRO -->
+        <aside class="menu--lateral">
+            <div class="menu--estoque">
+                <p>Estoque</p>
+                <a href="estoque.html"><i id="icon-estoque" data-feather="package"></i>Estoque Atual</a>
+            </div>
+
+            <div class="menu--entrada-saida">
+                <p>Entrada / Saída</p>
+                <a href="entrada.html"><i id="icon-entrada" data-feather="upload"></i>Entrada</a>
+                <a href="saida.html" class="saida select"><i id="icon-saida" data-feather="trash-2"></i>Saída</a>
+            </div>
+        </aside>
+
+        <div class="dados-saida">
+            <!-- FORMULARIO INTEIRO -->
+            <form action="">
+                <label for="codigo">
+                    <span>Insira o Código</span><br />
+                    <input type="number" name="codigo" id="codigo">
+                </label>
+
+                <label for="quant">
+                    <span>Quant. Produto</span><br />
+                    <input type="number" name="quant" id="quant">
+                </label>
+                 
+                <div class="info-produto--atual">
+                    <p>Estoque Atual</p>
+                    <!-- ESSA PARTE FOI ctrl + c / crtl + v NA TABELA DO ESTOQUE OBS: ID e CLASS não foram alterados, CUIDADO!! -->
+                    <table class="saida-dados conttt"> <!-- COMEÇO DA TABELA -->
+                        <thead> <!-- CABEÇALHO DA TABELA -->
+                            <tr> <!-- LINHA DO CABEÇALHO. OBS: CONTÉM SOMENTE UMA -->
+                                <th>Código</th>   <!-- 1° COLUNA DO CABEÇALHO -->
+                                <th>Nome</th>     <!-- 2° COLUNA DO CABEÇALHO -->
+                                <th>Marca</th>    <!-- 3° COLUNA DO CABEÇALHO -->
+                                <th>Categoria</th>  <!-- 4° COLUNA DO CABEÇALHO -->
+                                <th>Quant.</th>     <!-- 5° COLUNA DO CABEÇALHO -->
+                                <th>Valor $</th>    <!-- 6° COLUNA DO CABEÇALHO -->
+                            </tr>
+                        </thead>
+                        <tbody id="resultados"></tbody> <!-- CORPO DA TABELA. OBS: ESSA PARTE ESTAVA DENTRO DO thead -->
+                    </table>
+                </div>
+
+                <div class="bar"></div>
+
+                <div class="info-produto--depois">
+                    <p>Estoque Depois</p>
+                    <!-- ESSA PARTE FOI ctrl + c / crtl + v NA TABELA DO ESTOQUE OBS: ID e CLASS não foram alterados, CUIDADO!! -->
+                    <table class="saida-dados conttt"> <!-- COMEÇO DA TABELA -->
+                        <thead> <!-- CABEÇALHO DA TABELA -->
+                            <tr> <!-- LINHA DO CABEÇALHO. OBS: CONTÉM SOMENTE UMA -->
+                                <th>Código</th>   <!-- 1° COLUNA DO CABEÇALHO -->
+                                <th>Nome</th>     <!-- 2° COLUNA DO CABEÇALHO -->
+                                <th>Marca</th>    <!-- 3° COLUNA DO CABEÇALHO -->
+                                <th>Categoria</th>  <!-- 4° COLUNA DO CABEÇALHO -->
+                                <th>Quant.</th>     <!-- 5° COLUNA DO CABEÇALHO -->
+                                <th>Valor $</th>    <!-- 6° COLUNA DO CABEÇALHO -->
+                            </tr>
+                        </thead>
+                        <tbody id="resultados"></tbody> <!-- CORPO DA TABELA. OBS: ESSA PARTE ESTAVA DENTRO DO thead -->
+                    </table>
+                </div>
+
+                <div class="buttons"> <!-- Foi Modificado na parte ONCLICK -->
+                    <button>Enviar<i id="icon-enviar" data-feather="check"></i></button>
+                    <a href="#"><i id="icon-limpar" data-feather="x"></i></a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        feather.replace()
+    </script>
+    <script src="scripts.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Estoque</title>
+    <link rel="stylesheet" href="entrada.css">
+</head>
+<body>
+    <section class="container">
+        <!-- MENU LATERAL INTEIRO -->
+        <aside class="menu--lateral">
+            <div class="menu--estoque">
+                <p>Estoque</p>
+                <a href="estoque.html"><i id="icon-estoque" data-feather="package"></i>Estoque Atual</a>
+            </div>
+
+            <div class="menu--entrada-saida">
+                <p>Entrada / Saída</p>
+                <a href="entrada.html" class="entrada select"><i id="icon-entrada" data-feather="upload"></i>Entrada</a>
+                <a href="saida.html"><i id="icon-saida" data-feather="trash-2"></i>Saída</a>
+            </div>
+
+            <!-- <div class="menu--total-vendas">
+                <p>Total de Vendas</p>
+                <a href="#" class="total"><i id="icon-total" data-feather="dollar-sign"></i>Total</a>
+            </div>  LEMBRANDO QUE AQUI NÃO SERÁ NECESSARIO POR ENQUANTO -->
+        </aside>
+
+        <!-- DIV INTEIRA -->
+        <div class="dados-entrada">
+            <!-- FORMULARIO INTEIRO -->
+            <form action="">
+                <label for="codigo">
+                    <span>Insira o Código</span><br />
+                    <input type="number" name="codigo" id="codigo">
+                </label>
+
+                <label for="nome">
+                    <span>Nome Produto</span><br />
+                    <input type="text" name="name" id="nome">
+                </label>
+            
+                <label for="marca">
+                    <span>Marca Produto</span><br />
+                    <input type="text" name="marca" id="marca">
+                </label>
+
+                <label for="categoria">
+                    <span>Categ. Produto</span><br />
+                    <input type="text" name="categoria" id="categoria">
+                </label>
+                
+                <label for="quant">
+                    <span>Quant. Produto</span><br />
+                    <input type="number" name="quant" id="quant">
+                </label>
+
+                <label for="valor">
+                    <span>Valor Produto</span><br />
+                    <input type="text" name="valor" id="valor">
+                </label>
+                 
+                <div class="buttons"> <!-- Foi Modificado na parte ONCLICK -->
+                    <button onclick="validarProduto()">Enviar<i id="icon-enviar" data-feather="check"></i></button>
+                    <a href="#"><i id="icon-limpar" data-feather="x" onclick="apagar()"></i></a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        feather.replace()
+    </script>
+    <script src="scripts.js"></script>
+</body>
+</html>

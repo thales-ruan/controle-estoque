@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Estoque</title>
+    <link rel="stylesheet" href="estoque.css">
+</head>
+<body>
+    <!-- A section É O CONTAINER DE TUDO DESSA PÁGINA -->
+    <section class="container">
+        <aside class="menu--lateral">  <!-- AQUI É O MENU LATERAL. OBS: TUDO OQUE ESTÁ NELE -->
+            <div class="menu--estoque"> <!-- AQUI É ONDE ESTÁ ESCRITO: ESTOQUE ATUAL -->
+                <p>Estoque</p>
+                <a href="estoque.html" class="select"><i id="icon-estoque" data-feather="package"></i>Estoque Atual</a>
+            </div>
+
+            <div class="menu--entrada-saida"> <!-- AQUI É ONDE ESTÁ ESCRITO: ENTRADA / SAÍDA -->
+                <p>Entrada / Saída</p>
+                <a href="entrada.html" class="entrada"><i id="icon-entrada" data-feather="upload"></i>Entrada</a>
+                <a href="saida.html"><i id="icon-saida" data-feather="trash-2"></i>Saída</a>
+            </div>
+
+            <!-- <div class="menu--total-vendas">
+                <p>Total de Vendas</p>
+                <a href="#" class="total"><i id="icon-total" data-feather="dollar-sign"></i>Total</a>
+            </div> PARTE REMOVIDA POR SER INÚTIL POR ENQUANTO -->
+        </aside>
+        
+        <div class="bloco--estoque"> <!-- PARTE DO ESTOQUE INTEIRO. OBS: PARTE BRANCA -->
+            <div class="title-estoque"> <!-- ESSA div É A PARTE VERDE ESCRITO: "Estoque Atual e Detalhes de Estoque" -->
+                <span>Estoque Atual</span>
+                <p>Detalhes do Estoque</p>
+            </div>
+
+            <div class="bar"></div> <!-- ESSA PARTE É A BARRINHA VERDE FINA -->
+
+            <form action="."> <!-- AQUI É O FORMULARIO NO CANTO DIREITO DA TELA -->
+                <input type="text" name="produto" placeholder="Código do Produto"> <!-- INPUT DO FORM -->
+                <a href="#"><i id="icon-form" data-feather="search"></i></a> <!-- ICONE lupa DO INPUT -->
+            </form>
+
+            <table class="saida-dados conttt"> <!-- COMEÇO DA TABELA -->
+                <thead> <!-- CABEÇALHO DA TABELA -->
+                    <tr> <!-- LINHA DO CABEÇALHO. OBS: CONTÉM SOMENTE UMA -->
+                        <th>Código</th>   <!-- 1° COLUNA DO CABEÇALHO -->
+                        <th>Nome</th>     <!-- 2° COLUNA DO CABEÇALHO -->
+                        <th>Marca</th>    <!-- 3° COLUNA DO CABEÇALHO -->
+                        <th>Categoria</th>  <!-- 4° COLUNA DO CABEÇALHO -->
+                        <th>Quant.</th>     <!-- 5° COLUNA DO CABEÇALHO -->
+                        <th>Valor $</th>    <!-- 6° COLUNA DO CABEÇALHO -->
+                    </tr>
+                </thead>
+                <tbody id="resultados"></tbody> <!-- CORPO DA TABELA. OBS: ESSA PARTE ESTAVA DENTRO DO thead -->
+            </table>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        feather.replace()
+    </script>
+    <script src="scripts.js"></script>
+    <script>listarEstoque()</script>
+</body>
+</html>
